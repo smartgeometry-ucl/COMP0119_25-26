@@ -95,8 +95,10 @@ reference:
 1. Install pyglet via `conda install -n geo_tutorials -c conda-forge pyglet`
 (This pre-installs pyrender's fork of pyglet, which enables OpenGL contexts - might only be necessary on mac)
 
-2. Install pyrender via `conda install -n geo_tutorials -c conda-forge pyrender`
-3. Check that you can run `import pyrender` in python.
+You need to ensure your pyglet version is < 2, `pip install "pyglet<2"` to keep libraries compatible since pyrender is older.
+
+3. Install pyrender via `conda install -n geo_tutorials -c conda-forge pyrender`
+4. Check that you can run `import pyrender` in python.
 
 Trouble shooting:
 - You could try installing pyglet via github instead of conda:
@@ -191,3 +193,4 @@ For now, please just run the notebook halfedge_test.ipynb to check that you can 
 The notebook should read an obj file, convert it to halfedge representation, then export it back into obj and off format. It should create two meshes ('test.off' and 'test.obj'). Check that you can open these in meshlab. (open meshlab, then 'File -> import  mesh ...').
 
 Tell us if anything doesn't work. :)
+
