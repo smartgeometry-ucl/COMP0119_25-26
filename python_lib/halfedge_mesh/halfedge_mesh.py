@@ -141,8 +141,8 @@ class HalfedgeMesh:
                 Edges[all_facet_edges[i]] = Halfedge()
                 Edges[all_facet_edges[i]].facet = facet
                 Edges[all_facet_edges[i]].vertex = vertices[
-                    all_facet_edges[i][0]]###
-                vertices[all_facet_edges[i][0]].halfedge = Edges[all_facet_edges[i]]###
+                    all_facet_edges[i][1]]
+                vertices[all_facet_edges[i][1]].halfedge = Edges[all_facet_edges[i]]
                 halfedge_count +=1
 
             facet.halfedge = Edges[all_facet_edges[0]]
